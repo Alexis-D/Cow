@@ -1,0 +1,4 @@
+parser.out
+__pycache__/**
+yacc_out/**
+ply/__pycache__/**

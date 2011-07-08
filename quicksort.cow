@@ -1,0 +1,28 @@
+fun quicksort(l):
+    len = @l
+
+    if len <= 1:
+        l
+    else:
+        less, great = [], []
+
+        pivot = l !! 0
+        i = 1
+
+        while i < len:
+            v = l !! i++
+
+            if v < pivot:
+                less += [v]
+            else:
+                great += [v]
+            end
+        end
+
+        quicksort(less) + [pivot] + quicksort(great)
+    end
+end
+
+puts 'Unordered:', (ll = [2, 3, 9, 2, 7, 5, 4, 2, 1])
+puts 'Sorted   :', quicksort(ll)
+
